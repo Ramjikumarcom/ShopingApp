@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1,
+h2 {
+    margin: 0;
+    color: #444;
+}
+
+p {
+    margin: 5px 0;
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-img {
+    position: relative;
+    margin-right: 20px;
+}
+
+.profile-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.edit-photo-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.edit-photo-btn .btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+}
+
+.profile-info p {
+    color: #888;
+    font-size: 14px;
+}
+
+.edit-profile-btn {
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Profile Body */
+.profile-body {
+    padding: 20px;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.profile-section h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.order-list,
+.payment-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.order-list li,
+.payment-list li {
+    padding: 10px;
+    background: #f1f1f1;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.add-payment-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
