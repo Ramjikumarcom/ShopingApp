@@ -38,7 +38,9 @@ function UpdateProfile() {
     const geo = navigator.geolocation;
     geo.getCurrentPosition(userCoords)
     function userCoords(position) {
+
         let userLatitude = position.coords.latitude;
+        console.log(userLatitude)
         let userLongitude = position.coords.longitude
         setlattitude(userLatitude)
         setlongitude(userLongitude)
