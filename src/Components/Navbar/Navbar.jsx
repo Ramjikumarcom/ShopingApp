@@ -10,12 +10,14 @@ import { ShopContext } from '../../Context/ShopContext';
 const Navbar = () => {
     const [menu, setMenu] = useState('Shop');
     const profileNavigate = useNavigate();
-    const { getTotalCartItems } = useContext(ShopContext);
-
+    const { getTotalCartItems, setSearchTerm } = useContext(ShopContext);
+    const navigator = useNavigate();
     return (
         <div className="Navbar">
             {/* Logo Section */}
-            <div className="nav-logo">
+            <div className="nav-logo" style={{ cursor: 'pointer' }} onClick={() => {
+                navigator("/")
+            }}>
                 <img src={logo} alt="Logo" />
                 <p>FUNSHOP</p>
             </div>
@@ -50,7 +52,9 @@ const Navbar = () => {
 
             {/* Search Bar */}
             <div className="searchitem">
-                <input type="text" placeholder="Search Item" />
+                <input type="text" placeholder="Search Item.." onChange={(event) => {
+                    setSearchTerm(event.target.value)
+                }} />
                 <CiSearch
                     className="searchIcon"
                     style={{

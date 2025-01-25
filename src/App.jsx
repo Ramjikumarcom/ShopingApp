@@ -19,6 +19,7 @@ import Help from './Components/Help/Help'
 import Payment from './Components/Payment/Payment'
 import Profile from './Components/Profile/Profile'
 import PromoCodeData from './Components/PromoCodeData/PromoCodeData'
+import CheckVerification from './Components/CheckVerification/CheckVerification'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,7 +33,6 @@ function App() {
           <Route path='/men' element={<ShopCategory banner={men_banner} category={'men'}></ShopCategory>}></Route>
           <Route path='/women' element={<ShopCategory category={'women'} banner={women_banner}></ShopCategory>}></Route>
           <Route path='/kids' element={<ShopCategory category={'kid'} banner={kid_banner}></ShopCategory>}></Route>
-
           <Route path='/product' element={<Product></Product>}>
             <Route path=':productId' element={<Product></Product>}></Route>
           </Route>
@@ -43,8 +43,7 @@ function App() {
           <Route path='/help' element={<Help></Help>}></Route>
           <Route path='/payment' element={<Payment></Payment>}></Route>
           <Route path='/profile' element={<Profile></Profile>}></Route>
-
-
+          <Route path='/CheckVerification' element={<CheckVerification></CheckVerification>}></Route>
         </Routes>
 
         <Footer></Footer>

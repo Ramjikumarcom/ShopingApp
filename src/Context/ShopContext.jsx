@@ -2,6 +2,7 @@ import React, { createContext, useState } from "react";
 
 import all_product from '../Components/Assets/all_product'
 import LoginData from "../Components/Assets/LoginData";
+import userId from "../Components/Assets/UserId";
 import PromocodeArray from "../Components/Assets/Promocode";
 
 
@@ -14,11 +15,11 @@ const getDefaultCart = () => {
     return cart;
 }
 const ShopContextProvider = (props) => {
-
     const [cartItems, setCartItems] = useState(getDefaultCart())
     const [Promocode, setPromocode] = useState('');
     const [pcodeDiscount, setPcodeDiscount] = useState(0)
     const [EditProfileInformati, setEditProfileInformati] = useState({})
+    const [searchTerm, setSearchTerm] = useState("");
 
 
     const addToCart = (itemId) => {
@@ -107,7 +108,19 @@ const ShopContextProvider = (props) => {
 
     }
 
-    const contextValue = { getTotalCartItems, getSubTotalAmount, all_product, cartItems, addToCart, removeFromCart, emailValidation, GetPromocodeDiscount, Promocode, pcodeDiscount, getTotalAmount, EditProfileInformation, EditProfileInformati }
+    const userValidation = (userIdElement, UpasswordElement) => {
+        let UserCrediential = userId.find((checkuser) => {
+            return (checkuser.UserId === userIdElement && checkuser.password === UpasswordElement)
+        });
+
+        if (UserCrediential) {
+            return true;
+        }
+        else return false;
+    }
+
+
+    const contextValue = { getTotalCartItems, getSubTotalAmount, all_product, cartItems, addToCart, removeFromCart, emailValidation, GetPromocodeDiscount, Promocode, pcodeDiscount, getTotalAmount, EditProfileInformation, EditProfileInformati, userValidation, searchTerm, setSearchTerm }
     // console.log(cartItems)
 
 

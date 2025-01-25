@@ -89,7 +89,7 @@ function CartItem() {
                     </div>
                     <button onClick={() => {
 
-                        navigator('/payment')
+                        navigator('/CheckVerification')
                     }}>PROCEED TO CHECKOUT</button>
                 </div>
                 <div className="CARTITEMS-PROMOCODE">

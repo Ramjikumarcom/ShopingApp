@@ -136,7 +136,7 @@ function Payment() {
                                     type="text"
                                     required
                                 />
-                                <a className="cvv-info" href="#">What is CVV?</a>
+                                <a className="cvv-info" href="https://www.cvvnumber.com/">What is CVV?</a>
                             </div>
 
                             <button className="btn">
